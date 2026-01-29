@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha No-Code - Charte Graphique V2.0</title>
+    <title>Alpha No-Code - Charte Graphique Officielle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,185 +27,716 @@
             --line-soft: rgba(234, 240, 255, 0.10);
             --focus-glow: rgba(0, 229, 168, 0.55);
             --glow-soft: rgba(0, 229, 168, 0.12);
+            --danger-bg: rgba(255, 90, 122, 0.10);
+            --danger-border: rgba(255, 90, 122, 0.35);
+            --input-bg: rgba(0, 0, 0, 0.16);
+            --input-border: rgba(0, 0, 0, 0.10);
             --warm-glow: rgba(255, 143, 92, 0.15);
             --gradient-ocean: linear-gradient(135deg, #11707C 0%, #0BA08F 100%);
             --gradient-ocean-soft: linear-gradient(135deg, #0E8886 0%, #0BA08F 100%);
+            --gradient-product: linear-gradient(135deg, #0B1020 0%, #00E5A8 100%);
             --gradient-warm: linear-gradient(135deg, #FF8F5C 0%, #FFB694 100%);
             --gradient-innovation: linear-gradient(135deg, #8B7FE8 0%, #B5ADEF 100%);
             --gradient-liberation: linear-gradient(135deg, #11707C 0%, #0BA08F 50%, #00E5A8 100%);
             --font-display: 'Montserrat', sans-serif;
             --font-body: 'Inter', sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
-            --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px; --space-xl: 32px; --space-2xl: 48px; --space-3xl: 64px;
-            --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
             --shadow-soft: 0 4px 20px rgba(17, 112, 124, 0.08);
             --shadow-medium: 0 8px 32px rgba(17, 112, 124, 0.12);
-            --shadow-warm: 0 4px 20px rgba(255, 143, 92, 0.15);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: #1a1a2e; background: var(--brand-white); -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: #1a1a2e; background: var(--brand-white); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-lg); }
         section { padding: var(--space-3xl) 0; }
 
-        /* Wave Divider */
-        .wave-divider { width: 100%; height: 80px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cdefs%3E%3ClinearGradient id='waveGrad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2311707C'/%3E%3Cstop offset='50%25' style='stop-color:%230BA08F'/%3E%3Cstop offset='100%25' style='stop-color:%2300E5A8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23waveGrad)' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat; background-size: cover; opacity: 0.15; }
-
-        /* Hero */
-        .hero { background: var(--gradient-ocean); color: white; padding: var(--space-3xl) 0; text-align: center; position: relative; overflow: hidden; }
-        .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23ffffff' d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom; background-size: cover; }
-        .hero-content { position: relative; z-index: 1; }
-        .hero .logo { width: 120px; height: auto; margin-bottom: var(--space-lg); filter: brightness(0) invert(1); }
-        .hero h1 { font-family: var(--font-display); font-size: 48px; font-weight: 700; margin-bottom: var(--space-sm); }
-        .hero .subtitle { font-size: 20px; opacity: 0.9; margin-bottom: var(--space-md); }
-        .hero .version-badge { display: inline-flex; align-items: center; gap: var(--space-sm); background: rgba(255, 255, 255, 0.15); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md); font-size: 14px; backdrop-filter: blur(10px); }
-        .hero .tagline { max-width: 600px; margin: var(--space-xl) auto 0; font-size: 18px; line-height: 1.6; opacity: 0.95; }
+        /* HERO - CORRIGÉ */
+        .hero {
+            background: var(--gradient-ocean);
+            color: white;
+            padding: var(--space-3xl) 0 120px;
+            text-align: center;
+            position: relative;
+        }
+        .hero .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: var(--space-lg);
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+        .hero .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: var(--space-lg);
+        }
+        .hero .version-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        .hero .tagline {
+            max-width: 600px;
+            margin: var(--space-xl) auto 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+        .hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
 
         /* Section Headers */
-        .section-header { text-align: center; margin-bottom: var(--space-2xl); }
-        .section-header h2 { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--brand-teal-deep); margin-bottom: var(--space-sm); }
-        .section-header p { color: #5a6170; font-size: 16px; }
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--brand-teal-deep);
+            margin-bottom: var(--space-sm);
+        }
+        .section-header p {
+            color: #5a6170;
+            font-size: 16px;
+        }
 
-        /* V2 Badge */
-        .v2-badge { display: inline-flex; align-items: center; gap: 4px; background: var(--accent-warm); color: white; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-
-        /* Palette Section */
         .palette-section { background: #f8fafa; }
-        .palette-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-md); }
-        .color-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
-        .color-swatch { height: 100px; }
+
+        /* Grids */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-md); }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-soft);
+        }
+        .card h4 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            margin-bottom: var(--space-sm);
+        }
+        .card p {
+            font-size: 14px;
+            color: #5a6170;
+        }
+
+        /* Color Cards */
+        .color-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .color-swatch { height: 80px; }
         .color-info { padding: var(--space-md); }
-        .color-name { font-weight: 600; font-size: 14px; color: #1a1a2e; margin-bottom: 4px; }
+        .color-name { font-weight: 600; font-size: 14px; color: #1a1a2e; }
         .color-hex { font-family: var(--font-mono); font-size: 13px; color: #5a6170; }
-        .color-usage { font-size: 12px; color: #8a8f9a; margin-top: var(--space-xs); }
+        .color-usage { font-size: 12px; color: #8a8f9a; margin-top: 4px; }
+
         .palette-group { margin-bottom: var(--space-2xl); }
-        .palette-group-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm); }
+        .palette-group:last-child { margin-bottom: 0; }
+        .palette-group-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            margin-bottom: var(--space-lg);
+        }
 
         /* Logo Section */
-        .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-xl); }
-        .logo-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
+        .logo-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
         .logo-card.dark-bg .logo-preview { background: var(--dark-bg); }
-        .logo-preview { padding: var(--space-xl); display: flex; align-items: center; justify-content: center; min-height: 160px; background: #f8fafa; }
-        .logo-preview img { max-width: 140px; height: auto; }
-        .logo-info { padding: var(--space-lg); border-top: 1px solid #eef2f5; }
-        .logo-info h4 { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-xs); }
+        .logo-preview {
+            padding: var(--space-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+            background: #f8fafa;
+        }
+        .logo-preview img { max-width: 120px; height: auto; }
+        .logo-info {
+            padding: var(--space-lg);
+            border-top: 1px solid #eef2f5;
+        }
+        .logo-info h4 {
+            font-family: var(--font-display);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            margin-bottom: 4px;
+        }
         .logo-info p { font-size: 13px; color: #5a6170; }
 
         /* Icon Table */
-        .icon-table { width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
-        .icon-table th { background: var(--brand-teal-deep); color: white; font-family: var(--font-display); font-weight: 600; font-size: 14px; padding: var(--space-md) var(--space-lg); text-align: left; }
-        .icon-table td { padding: var(--space-md) var(--space-lg); border-bottom: 1px solid #eef2f5; vertical-align: middle; }
+        .icon-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .icon-table th {
+            background: var(--brand-teal-deep);
+            color: white;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            padding: var(--space-md);
+            text-align: left;
+        }
+        .icon-table td {
+            padding: var(--space-md);
+            border-bottom: 1px solid #eef2f5;
+            vertical-align: middle;
+            font-size: 14px;
+        }
         .icon-table tr:last-child td { border-bottom: none; }
         .icon-table tr:hover { background: #f8fafa; }
-        .icon-table .icon-preview { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #f0f7f7; border-radius: var(--radius-sm); }
-        .icon-table .icon-preview img { width: 32px; height: 32px; }
-        .icon-table .icon-preview.teal img { filter: invert(42%) sepia(60%) saturate(500%) hue-rotate(130deg) brightness(95%); }
-        .icon-table .icon-preview.warm img { filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(330deg) brightness(100%); }
-        .icon-table .icon-preview.innovation img { filter: invert(50%) sepia(80%) saturate(400%) hue-rotate(220deg) brightness(100%); }
-        .icon-table .icon-name { font-family: var(--font-mono); font-size: 13px; color: var(--brand-teal-deep); }
-        .icon-table .icon-usage { font-size: 14px; color: #5a6170; }
-        .icon-table .icon-file { font-family: var(--font-mono); font-size: 12px; color: #8a8f9a; background: #f0f7f7; padding: 4px 8px; border-radius: 4px; }
-        .icon-table .color-tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
-        .icon-table .color-tag.teal { background: rgba(11, 160, 143, 0.12); color: var(--brand-teal-signature); }
-        .icon-table .color-tag.warm { background: rgba(255, 143, 92, 0.12); color: var(--accent-warm); }
-        .icon-table .color-tag.innovation { background: rgba(139, 127, 232, 0.12); color: var(--accent-innovation); }
+        .icon-preview-cell {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f7f7;
+            border-radius: var(--radius-sm);
+        }
+        .icon-preview-cell img { width: 28px; height: 28px; }
+        .icon-preview-cell.teal img { filter: invert(42%) sepia(60%) saturate(500%) hue-rotate(130deg) brightness(95%); }
+        .icon-preview-cell.warm img { filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(330deg) brightness(100%); }
+        .icon-preview-cell.innovation img { filter: invert(50%) sepia(80%) saturate(400%) hue-rotate(220deg) brightness(100%); }
+        .icon-name { font-family: var(--font-mono); font-size: 13px; color: var(--brand-teal-deep); }
+        .icon-file {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: #8a8f9a;
+            background: #f0f7f7;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .color-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .color-tag.teal { background: rgba(11, 160, 143, 0.12); color: var(--brand-teal-signature); }
+        .color-tag.warm { background: rgba(255, 143, 92, 0.12); color: var(--accent-warm); }
+        .color-tag.innovation { background: rgba(139, 127, 232, 0.12); color: var(--accent-innovation); }
 
         /* Typography */
-        .typo-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl); }
-        .typo-card { background: white; border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-soft); }
-        .typo-preview { font-size: 48px; font-weight: 700; margin-bottom: var(--space-md); background: var(--gradient-ocean); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .typo-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+        .typo-preview {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            background: var(--gradient-ocean);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .typo-card.montserrat .typo-preview { font-family: var(--font-display); }
         .typo-card.inter .typo-preview { font-family: var(--font-body); }
         .typo-card.mono .typo-preview { font-family: var(--font-mono); font-size: 36px; }
-        .typo-name { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-xs); }
-        .typo-role { color: #5a6170; font-size: 14px; }
+        .typo-name {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+        }
+        .typo-role { color: #5a6170; font-size: 14px; margin-top: 4px; }
 
         /* Hierarchy Table */
-        .hierarchy-table { width: 100%; border-collapse: collapse; margin-top: var(--space-xl); background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
-        .hierarchy-table th, .hierarchy-table td { padding: var(--space-md) var(--space-lg); text-align: left; border-bottom: 1px solid #eef2f5; }
-        .hierarchy-table th { background: var(--brand-teal-deep); color: white; font-family: var(--font-display); font-weight: 600; font-size: 14px; }
+        .hierarchy-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .hierarchy-table th, .hierarchy-table td {
+            padding: var(--space-md) var(--space-lg);
+            text-align: left;
+            border-bottom: 1px solid #eef2f5;
+        }
+        .hierarchy-table th {
+            background: var(--brand-teal-deep);
+            color: white;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+        }
         .hierarchy-table tr:last-child td { border-bottom: none; }
-        .hierarchy-table .level { font-family: var(--font-mono); font-size: 12px; color: var(--brand-teal-signature); background: rgba(11, 160, 143, 0.1); padding: 4px 8px; border-radius: 4px; }
-        .hierarchy-table .specs { font-family: var(--font-mono); font-size: 13px; color: #5a6170; }
-        .hierarchy-table .preview-h1 { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--brand-teal-deep); }
-        .hierarchy-table .preview-h2 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--brand-teal-deep); }
-        .hierarchy-table .preview-h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--brand-teal-deep); }
-        .hierarchy-table .preview-body { font-family: var(--font-body); font-size: 16px; color: #1a1a2e; }
-        .hierarchy-table .preview-code { font-family: var(--font-mono); font-size: 14px; color: var(--brand-teal-signature); background: #f0f7f7; padding: 4px 8px; border-radius: 4px; }
+        .level-tag {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--brand-teal-signature);
+            background: rgba(11, 160, 143, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .specs { font-family: var(--font-mono); font-size: 13px; color: #5a6170; }
 
         /* Gradient Cards */
-        .gradient-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg); }
-        .gradient-card { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
-        .gradient-preview { height: 120px; display: flex; align-items: flex-end; padding: var(--space-md); }
-        .gradient-preview span { color: white; font-family: var(--font-mono); font-size: 12px; background: rgba(0, 0, 0, 0.3); padding: 4px 8px; border-radius: 4px; }
-        .gradient-info { background: white; padding: var(--space-md); }
-        .gradient-name { font-weight: 600; font-size: 14px; color: #1a1a2e; margin-bottom: 4px; }
-        .gradient-usage { font-size: 12px; color: #5a6170; margin-bottom: var(--space-sm); }
-        .gradient-code { font-family: var(--font-mono); font-size: 11px; color: #8a8f9a; background: #f8fafa; padding: var(--space-sm); border-radius: var(--radius-sm); word-break: break-all; }
+        .gradient-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .gradient-preview {
+            height: 100px;
+            display: flex;
+            align-items: flex-end;
+            padding: var(--space-md);
+        }
+        .gradient-preview span {
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .gradient-info {
+            background: white;
+            padding: var(--space-md);
+        }
+        .gradient-name { font-weight: 600; font-size: 14px; color: #1a1a2e; }
+        .gradient-usage { font-size: 12px; color: #5a6170; margin-top: 2px; }
+        .gradient-code {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: #8a8f9a;
+            background: #f8fafa;
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            margin-top: var(--space-sm);
+            word-break: break-all;
+        }
 
-        /* Wave Showcase */
-        .wave-showcase { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
-        .wave-demo { height: 200px; background: linear-gradient(180deg, #f8fafa 0%, white 100%); position: relative; display: flex; align-items: center; justify-content: center; }
-        .wave-demo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cdefs%3E%3ClinearGradient id='waveGrad2' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2311707C'/%3E%3Cstop offset='50%25' style='stop-color:%230BA08F'/%3E%3Cstop offset='100%25' style='stop-color:%2300E5A8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23waveGrad2)' fill-opacity='0.12' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom; background-size: cover; }
-        .wave-demo-text { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--brand-teal-deep); position: relative; z-index: 1; }
-        .wave-info { padding: var(--space-xl); }
-        .wave-info h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-md); }
-        .wave-usages { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); }
-        .wave-usage-item { display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: #f8fafa; border-radius: var(--radius-md); font-size: 14px; color: #5a6170; }
-        .wave-usage-item strong { display: block; color: #1a1a2e; margin-bottom: 2px; }
+        /* RGBA Tokens */
+        .rgba-group {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-soft);
+        }
+        .rgba-group h4 {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid #eef2f5;
+        }
+        .rgba-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            font-size: 13px;
+        }
+        .rgba-item .name { color: #5a6170; }
+        .rgba-item code {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--brand-teal-signature);
+            background: #f0f7f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
 
         /* Buttons */
-        .buttons-showcase { display: flex; flex-wrap: wrap; gap: var(--space-lg); align-items: center; }
-        .btn { display: inline-flex; align-items: center; gap: var(--space-sm); padding: 14px 28px; border-radius: var(--radius-md); font-family: var(--font-body); font-size: 15px; font-weight: 500; text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: none; }
-        .btn-primary { background: var(--gradient-ocean); color: white; box-shadow: 0 4px 16px rgba(11, 160, 143, 0.25); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(11, 160, 143, 0.35); }
-        .btn-secondary { background: white; color: var(--brand-teal-signature); border: 2px solid var(--brand-teal-signature); }
-        .btn-secondary:hover { background: rgba(11, 160, 143, 0.05); }
-        .btn-ghost { background: transparent; color: var(--brand-teal-signature); }
-        .btn-ghost:hover { background: rgba(11, 160, 143, 0.08); }
-        .btn-warm { background: var(--gradient-warm); color: white; box-shadow: var(--shadow-warm); }
-        .btn-warm:hover { transform: translateY(-2px); }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: var(--gradient-ocean);
+            color: white;
+            box-shadow: 0 4px 16px rgba(11, 160, 143, 0.25);
+        }
+        .btn-secondary {
+            background: white;
+            color: var(--brand-teal-signature);
+            border: 2px solid var(--brand-teal-signature);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--brand-teal-signature);
+        }
+        .btn-warm {
+            background: var(--gradient-warm);
+            color: white;
+        }
 
         /* Badges */
-        .badges-showcase { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; margin-top: var(--space-lg); }
-        .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
         .badge-primary { background: rgba(11, 160, 143, 0.12); color: var(--brand-teal-signature); }
         .badge-warm { background: var(--accent-warm); color: white; }
         .badge-innovation { background: var(--accent-innovation); color: white; }
         .badge-success { background: rgba(0, 229, 168, 0.12); color: #00B386; }
 
-        /* Dark UI */
-        .dark-ui-section { background: var(--dark-bg); color: var(--dark-text); }
+        /* Dark UI Section */
+        .dark-ui-section {
+            background: var(--dark-bg);
+            color: var(--dark-text);
+        }
         .dark-ui-section .section-header h2 { color: white; }
         .dark-ui-section .section-header p { color: var(--text-muted); }
-        .dark-card { background: var(--dark-card); border-radius: var(--radius-lg); padding: var(--space-xl); border: 1px solid var(--line-soft); }
-        .dark-card h4 { color: white; font-family: var(--font-display); font-size: 16px; font-weight: 600; margin-bottom: var(--space-md); }
-        .dark-input { width: 100%; background: rgba(0, 0, 0, 0.16); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--dark-text); font-family: var(--font-body); font-size: 14px; }
-        .dark-input:focus { outline: none; border-color: var(--dark-primary); box-shadow: 0 0 0 3px var(--glow-soft); }
-        .dark-btn { background: var(--dark-primary); color: var(--dark-bg); padding: 12px 24px; border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 14px; font-weight: 500; cursor: pointer; }
-        .dark-btn-secondary { background: transparent; color: var(--dark-text); border: 1px solid var(--line-soft); }
+        .dark-card {
+            background: var(--dark-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--line-soft);
+        }
+        .dark-card h4 {
+            color: white;
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        .dark-input {
+            width: 100%;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            color: var(--dark-text);
+            font-family: var(--font-body);
+            font-size: 14px;
+        }
+        .dark-input::placeholder { color: var(--text-muted); }
+        .dark-btn {
+            background: var(--dark-primary);
+            color: var(--dark-bg);
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .dark-btn-secondary {
+            background: transparent;
+            color: var(--dark-text);
+            border: 1px solid var(--line-soft);
+        }
+
+        /* Accessibility */
+        .contrast-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-soft);
+        }
+        .contrast-demo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        .contrast-preview {
+            width: 70px;
+            height: 70px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .contrast-ratio {
+            font-family: var(--font-mono);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--brand-teal-deep);
+        }
+        .contrast-status {
+            font-size: 12px;
+            color: #00B386;
+            margin-top: 4px;
+        }
 
         /* Rules */
-        .rules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-xl); }
-        .rules-do { background: rgba(0, 229, 168, 0.05); border-radius: var(--radius-lg); padding: var(--space-xl); border-left: 4px solid #00B386; }
-        .rules-dont { background: rgba(255, 90, 122, 0.05); border-radius: var(--radius-lg); padding: var(--space-xl); border-left: 4px solid var(--dark-danger); }
-        .rules-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-bottom: var(--space-lg); }
+        .rules-do {
+            background: rgba(0, 179, 134, 0.05);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border-left: 4px solid #00B386;
+        }
+        .rules-dont {
+            background: rgba(255, 90, 122, 0.05);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border-left: 4px solid var(--dark-danger);
+        }
+        .rules-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
         .rules-do .rules-title { color: #00B386; }
         .rules-dont .rules-title { color: var(--dark-danger); }
         .rules-list { list-style: none; }
-        .rules-list li { display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-sm) 0; font-size: 14px; color: #5a6170; }
+        .rules-list li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #5a6170;
+        }
+
+        /* Synthesis Table */
+        .synthesis-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .synthesis-table th {
+            background: var(--brand-teal-deep);
+            color: white;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            padding: var(--space-md) var(--space-lg);
+            text-align: left;
+        }
+        .synthesis-table td {
+            padding: var(--space-md) var(--space-lg);
+            border-bottom: 1px solid #eef2f5;
+            font-size: 14px;
+            color: #5a6170;
+        }
+        .synthesis-table tr:last-child td { border-bottom: none; }
+
+        /* Info Box */
+        .info-box {
+            padding: var(--space-lg);
+            background: rgba(11, 160, 143, 0.08);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--brand-teal-signature);
+            margin-top: var(--space-xl);
+        }
+        .info-box p { font-size: 14px; color: #5a6170; margin-bottom: 4px; }
+        .info-box p:last-child { margin-bottom: 0; }
+        .info-box strong { color: var(--brand-teal-deep); }
 
         /* Footer */
-        .footer { background: var(--brand-teal-deep); color: white; padding: var(--space-2xl) 0; text-align: center; }
-        .footer-logo { width: 80px; height: auto; margin-bottom: var(--space-md); filter: brightness(0) invert(1); }
-        .footer h3 { font-family: var(--font-display); font-size: 24px; font-weight: 700; margin-bottom: var(--space-xs); }
+        .footer {
+            background: var(--brand-teal-deep);
+            color: white;
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+        .footer-logo { width: 60px; height: auto; margin-bottom: var(--space-md); }
+        .footer h3 {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+        }
         .footer p { opacity: 0.8; font-size: 14px; }
         .footer a { color: var(--dark-primary); text-decoration: none; }
 
+        /* Wave divider */
+        .wave-divider {
+            width: 100%;
+            height: 60px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cdefs%3E%3ClinearGradient id='wg' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2311707C'/%3E%3Cstop offset='100%25' style='stop-color:%230BA08F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23wg)' fill-opacity='0.1' d='M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z'/%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+
+        /* Wave Showcase */
+        .wave-showcase {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .wave-showcase-demo {
+            background: linear-gradient(180deg, #f8fafa 0%, #ffffff 100%);
+            padding: var(--space-2xl) var(--space-xl);
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .wave-showcase-text {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            position: relative;
+            z-index: 1;
+            margin-bottom: var(--space-xl);
+        }
+        .wave-showcase-svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+        .wave-showcase-info {
+            padding: var(--space-xl);
+            border-top: 1px solid #eef2f5;
+        }
+        .wave-showcase-info h4 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            margin-bottom: var(--space-lg);
+        }
+        .wave-usages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+        }
+        .wave-usage-card {
+            background: #f8fafa;
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+        }
+        .wave-usage-card strong {
+            display: block;
+            font-size: 14px;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .wave-usage-card span {
+            font-size: 13px;
+            color: #5a6170;
+        }
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
+            .wave-usages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ADN Cards */
+        .adn-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .adn-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-ocean);
+        }
+        .adn-card.warm::before { background: var(--gradient-warm); }
+        .adn-card.innovation::before { background: var(--gradient-innovation); }
+        .adn-card-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .adn-card-icon img { width: 36px; height: 36px; }
+        .adn-card .adn-card-icon img { filter: invert(42%) sepia(60%) saturate(500%) hue-rotate(130deg) brightness(95%); }
+        .adn-card.warm .adn-card-icon img { filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(330deg) brightness(100%); }
+        .adn-card.innovation .adn-card-icon img { filter: invert(50%) sepia(80%) saturate(400%) hue-rotate(220deg) brightness(100%); }
+        .adn-card h3 {
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--brand-teal-deep);
+            margin-bottom: var(--space-sm);
+        }
+        .adn-card p { color: #5a6170; font-size: 14px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
             section { padding: var(--space-2xl) 0; }
-            .section-header h2 { font-size: 26px; }
+            .section-header h2 { font-size: 24px; }
             .icon-table { display: block; overflow-x: auto; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -213,50 +744,98 @@
 
     <!-- HERO -->
     <header class="hero">
-        <div class="container hero-content">
-            <img src="assets/logo-mono-white.svg" alt="Alpha No-Code" class="logo">
+        <div class="container">
+            <img src="assets/logo-color.svg" alt="Alpha No-Code" class="logo">
             <h1>Alpha No-Code</h1>
             <p class="subtitle">Charte Graphique Officielle</p>
-            <div class="version-badge">
-                <span>Version 2.0</span>
-                <span>•</span>
-                <span>2025</span>
-                <span class="v2-badge">V2 UPGRADE</span>
-            </div>
-            <p class="tagline">
-                Tech sérieuse, IA utile, automatisation orientée ROI.<br>
-                Premium mais accessible. <strong>L'IA qui libère votre créativité.</strong>
-            </p>
+            <div class="version-badge">2025</div>
+            <p class="tagline">Tech sérieuse, IA utile, automatisation orientée ROI.<br>Premium mais accessible.</p>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#ffffff" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L0,120Z"></path>
+            </svg>
         </div>
     </header>
 
-    <!-- LOGO SECTION -->
+    <!-- VUE D'ENSEMBLE -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Vue d'ensemble</h2>
+                <p>Vision & Positionnement</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 17px; color: #5a6170; line-height: 1.7;">Alpha No-Code révolutionne l'accès à l'intelligence artificielle en proposant des solutions no-code innovantes. Notre identité visuelle reflète cette approche : moderne, accessible et technologique.</p>
+            </div>
+            <div class="grid-4" style="margin-top: var(--space-xl);">
+                <div class="card" style="text-align: center;"><strong style="color: var(--brand-teal-deep);">Innovation</strong></div>
+                <div class="card" style="text-align: center;"><strong style="color: var(--brand-teal-deep);">Accessibilité</strong></div>
+                <div class="card" style="text-align: center;"><strong style="color: var(--brand-teal-deep);">Technologie</strong></div>
+                <div class="card" style="text-align: center;"><strong style="color: var(--brand-teal-deep);">Simplicité</strong></div>
+            </div>
+            <div class="info-box">
+                <p><strong>Signature visuelle :</strong> Dégradé Ocean (#11707C → #0BA08F) pour le Brand · #00E5A8 sur #0B1020 pour le Produit</p>
+                <p><strong>Usage :</strong> PDF = crédibilité / décision · Formulaire = conversion / expérience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADN DE MARQUE -->
+    <section class="palette-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>ADN de Marque</h2>
+                <p>Les piliers qui définissent notre identité</p>
+            </div>
+            <div class="grid-4">
+                <div class="adn-card">
+                    <div class="adn-card-icon"><img src="assets/icones/target.svg" alt="Target"></div>
+                    <h3>IA utile</h3>
+                    <p>Pas cosmétique, ROI mesurable</p>
+                </div>
+                <div class="adn-card">
+                    <div class="adn-card-icon"><img src="assets/icones/lightning.svg" alt="Lightning"></div>
+                    <h3>Tech maîtrisée</h3>
+                    <p>Accessible, pas anxiogène</p>
+                </div>
+                <div class="adn-card warm">
+                    <div class="adn-card-icon"><img src="assets/icones/chart-line-up.svg" alt="Chart"></div>
+                    <h3>Orientée ROI</h3>
+                    <p>Gains quantifiables</p>
+                </div>
+                <div class="adn-card innovation">
+                    <div class="adn-card-icon"><img src="assets/icones/sparkle.svg" alt="Sparkle"></div>
+                    <h3>Premium & fiable</h3>
+                    <p>Confiance à chaque contact</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: var(--space-xl); color: var(--brand-teal-deep); font-weight: 500;">La charte transmet : <strong>Clarté · Confiance · Performance · Simplicité</strong></p>
+        </div>
+    </section>
+
+    <div class="wave-divider"></div>
+
+    <!-- LOGO -->
     <section>
         <div class="container">
             <div class="section-header">
                 <h2>Logo et Règles d'Usage</h2>
                 <p>Versions officielles du logo Alpha No-Code</p>
             </div>
-            <div class="logo-grid">
+            <div class="grid-4">
                 <div class="logo-card">
                     <div class="logo-preview"><img src="assets/logo-color.svg" alt="Logo couleur"></div>
                     <div class="logo-info">
                         <h4>Version Couleur</h4>
-                        <p>Dégradé Ocean — Usage principal sur fond blanc</p>
-                    </div>
-                </div>
-                <div class="logo-card dark-bg">
-                    <div class="logo-preview"><img src="assets/logo-dark-ui.svg" alt="Logo Dark UI"></div>
-                    <div class="logo-info">
-                        <h4>Dark UI Gradient</h4>
-                        <p>Pour fonds sombres (#0B1020) avec dégradé</p>
+                        <p>Dégradé Ocean — Fond blanc</p>
                     </div>
                 </div>
                 <div class="logo-card">
                     <div class="logo-preview"><img src="assets/logo-mono-black.svg" alt="Logo mono noir"></div>
                     <div class="logo-info">
                         <h4>Mono Noir</h4>
-                        <p>Documents clairs, impression N&B</p>
+                        <p>Documents, impression</p>
                     </div>
                 </div>
                 <div class="logo-card dark-bg">
@@ -266,297 +845,99 @@
                         <p>Fonds sombres, Dark UI</p>
                     </div>
                 </div>
+                <div class="logo-card dark-bg">
+                    <div class="logo-preview"><img src="assets/logo-dark-ui.svg" alt="Logo Dark UI"></div>
+                    <div class="logo-info">
+                        <h4>Dark UI Gradient</h4>
+                        <p>Fonds sombres avec dégradé</p>
+                    </div>
+                </div>
             </div>
-            <div style="margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
-                <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
-                    <h4 style="font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-md);">Tailles minimales</h4>
-                    <p style="font-size: 14px; color: #5a6170;"><strong>Impression :</strong> ≥ 18 mm<br><strong>Écran :</strong> ≥ 120 px</p>
+            <div class="grid-3" style="margin-top: var(--space-xl);">
+                <div class="card">
+                    <h4>Tailles minimales</h4>
+                    <p><strong>Impression :</strong> ≥ 18 mm<br><strong>Écran :</strong> ≥ 120 px</p>
                 </div>
-                <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
-                    <h4 style="font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-md);">Aire de protection</h4>
-                    <p style="font-size: 14px; color: #5a6170;">Marge min = épaisseur du trait du "A"</p>
+                <div class="card">
+                    <h4>Aires de protection</h4>
+                    <p>Marge min = épaisseur du trait du "A"</p>
                 </div>
-                <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
-                    <h4 style="font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-md);">Interdits</h4>
-                    <p style="font-size: 14px; color: #5a6170;">✗ Déformation<br>✗ Inversion dégradé<br>✗ Modification couleurs</p>
+                <div class="card">
+                    <h4>Interdits</h4>
+                    <p>✗ Déformation · ✗ Inversion dégradé · ✗ Modification couleurs</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="wave-divider"></div>
-
-    <!-- PALETTE DE COULEURS -->
+    <!-- PALETTE BRAND -->
     <section class="palette-section">
         <div class="container">
             <div class="section-header">
-                <h2>Palette de Couleurs</h2>
-                <p>Tokens design pour Brand (clair) et Produit (dark) — <span class="v2-badge">V2</span> Accents chauds</p>
+                <h2>Palette de Couleurs — Brand</h2>
+                <p>Codes utilisés pour le logo et la communication</p>
             </div>
-
             <div class="palette-group">
-                <h3 class="palette-group-title">Couleurs Primaires (Brand)</h3>
-                <div class="palette-grid">
-                    <div class="color-card"><div class="color-swatch" style="background: #11707C;"></div><div class="color-info"><div class="color-name">Teal Profond</div><div class="color-hex">#11707C</div><div class="color-usage">Structure, textes, headers</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #0BA08F;"></div><div class="color-info"><div class="color-name">Teal Signature</div><div class="color-hex">#0BA08F</div><div class="color-usage">CTA, accents, éléments actifs</div></div></div>
+                <h4 class="palette-group-title">Couleurs Primaires</h4>
+                <div class="grid-4">
+                    <div class="color-card"><div class="color-swatch" style="background: #11707C;"></div><div class="color-info"><div class="color-name">Teal Profond</div><div class="color-hex">#11707C</div><div class="color-usage">Structure, headers</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #0BA08F;"></div><div class="color-info"><div class="color-name">Teal Signature</div><div class="color-hex">#0BA08F</div><div class="color-usage">CTA, accents</div></div></div>
                     <div class="color-card"><div class="color-swatch" style="background: #0E8886;"></div><div class="color-info"><div class="color-name">Teal Intermédiaire</div><div class="color-hex">#0E8886</div><div class="color-usage">Dégradés, transitions</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #B0D8D7;"></div><div class="color-info"><div class="color-name">Vert d'eau Clair</div><div class="color-hex">#B0D8D7</div><div class="color-usage">UI douce, fonds légers</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #B0D8D7;"></div><div class="color-info"><div class="color-name">Vert d'eau</div><div class="color-hex">#B0D8D7</div><div class="color-usage">UI douce, fonds</div></div></div>
                 </div>
             </div>
-
             <div class="palette-group">
-                <h3 class="palette-group-title">Accents Chauds <span class="v2-badge">NOUVEAU V2</span></h3>
-                <div class="palette-grid">
-                    <div class="color-card"><div class="color-swatch" style="background: #FF8F5C;"></div><div class="color-info"><div class="color-name">Coral Warm</div><div class="color-hex">#FF8F5C</div><div class="color-usage">Badges "Nouveau", témoignages</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #FFB694;"></div><div class="color-info"><div class="color-name">Coral Soft</div><div class="color-hex">#FFB694</div><div class="color-usage">Hover, backgrounds légers</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #8B7FE8;"></div><div class="color-info"><div class="color-name">Violet Innovation</div><div class="color-hex">#8B7FE8</div><div class="color-usage">IA créative, innovation</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #B5ADEF;"></div><div class="color-info"><div class="color-name">Violet Soft</div><div class="color-hex">#B5ADEF</div><div class="color-usage">Highlights, accents légers</div></div></div>
-                </div>
-            </div>
-
-            <div class="palette-group">
-                <h3 class="palette-group-title">Palette Produit (Dark UI)</h3>
-                <div class="palette-grid">
-                    <div class="color-card"><div class="color-swatch" style="background: #0B1020;"></div><div class="color-info"><div class="color-name">Dark BG</div><div class="color-hex">#0B1020</div><div class="color-usage">Background global</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #101A33;"></div><div class="color-info"><div class="color-name">Dark Card</div><div class="color-hex">#101A33</div><div class="color-usage">Cards, surfaces</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #00E5A8;"></div><div class="color-info"><div class="color-name">Primary Action</div><div class="color-hex">#00E5A8</div><div class="color-usage">CTA, éléments actifs</div></div></div>
-                    <div class="color-card"><div class="color-swatch" style="background: #FF5A7A;"></div><div class="color-info"><div class="color-name">Danger</div><div class="color-hex">#FF5A7A</div><div class="color-usage">Erreurs, alertes</div></div></div>
+                <h4 class="palette-group-title">Accents Chauds</h4>
+                <div class="grid-4">
+                    <div class="color-card"><div class="color-swatch" style="background: #FF8F5C;"></div><div class="color-info"><div class="color-name">Coral Warm</div><div class="color-hex">#FF8F5C</div><div class="color-usage">Badges, témoignages</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #FFB694;"></div><div class="color-info"><div class="color-name">Coral Soft</div><div class="color-hex">#FFB694</div><div class="color-usage">Hover, backgrounds</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #8B7FE8;"></div><div class="color-info"><div class="color-name">Violet Innovation</div><div class="color-hex">#8B7FE8</div><div class="color-usage">IA créative</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #B5ADEF;"></div><div class="color-info"><div class="color-name">Violet Soft</div><div class="color-hex">#B5ADEF</div><div class="color-usage">Highlights</div></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SYSTÈME D'ICÔNES V2 -->
+    <!-- PALETTE DARK UI -->
     <section>
         <div class="container">
             <div class="section-header">
-                <h2>Système d'Icônes</h2>
-                <p><span class="v2-badge">NOUVEAU V2</span> 27 icônes Phosphor Duotone — Fichiers SVG inclus</p>
+                <h2>Palette Produit — Dark UI</h2>
+                <p>Tokens du formulaire et de l'application</p>
             </div>
-
-            <table class="icon-table">
-                <thead>
-                    <tr>
-                        <th style="width: 80px;">Icône</th>
-                        <th>Nom</th>
-                        <th>Usage</th>
-                        <th>Fichier</th>
-                        <th>Couleur</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Icônes Métier (Teal) -->
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/robot.svg" alt="robot"></div></td>
-                        <td class="icon-name">robot</td>
-                        <td class="icon-usage">IA, Automation, Intelligence artificielle</td>
-                        <td><span class="icon-file">robot.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/flow-arrow.svg" alt="flow-arrow"></div></td>
-                        <td class="icon-name">flow-arrow</td>
-                        <td class="icon-usage">Workflows, Processus, Flux</td>
-                        <td><span class="icon-file">flow-arrow.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/clock-countdown.svg" alt="clock-countdown"></div></td>
-                        <td class="icon-name">clock-countdown</td>
-                        <td class="icon-usage">Temps gagné, Rapidité, Délais</td>
-                        <td><span class="icon-file">clock-countdown.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/chart-line-up.svg" alt="chart-line-up"></div></td>
-                        <td class="icon-name">chart-line-up</td>
-                        <td class="icon-usage">ROI, Résultats, Performance, Croissance</td>
-                        <td><span class="icon-file">chart-line-up.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/handshake.svg" alt="handshake"></div></td>
-                        <td class="icon-name">handshake</td>
-                        <td class="icon-usage">Partenariat, Collaboration, Confiance</td>
-                        <td><span class="icon-file">handshake.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/shield-check.svg" alt="shield-check"></div></td>
-                        <td class="icon-name">shield-check</td>
-                        <td class="icon-usage">Sécurité, Confiance, Protection</td>
-                        <td><span class="icon-file">shield-check.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/target.svg" alt="target"></div></td>
-                        <td class="icon-name">target</td>
-                        <td class="icon-usage">Objectifs, Précision, Focus</td>
-                        <td><span class="icon-file">target.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/lightning.svg" alt="lightning"></div></td>
-                        <td class="icon-name">lightning</td>
-                        <td class="icon-usage">Rapidité, Énergie, Puissance</td>
-                        <td><span class="icon-file">lightning.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/code-simple.svg" alt="code-simple"></div></td>
-                        <td class="icon-name">code-simple</td>
-                        <td class="icon-usage">No-Code, Développement, Tech</td>
-                        <td><span class="icon-file">code-simple.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/plugs-connected.svg" alt="plugs-connected"></div></td>
-                        <td class="icon-name">plugs-connected</td>
-                        <td class="icon-usage">Intégration, Connexion, API</td>
-                        <td><span class="icon-file">plugs-connected.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/arrows-merge.svg" alt="arrows-merge"></div></td>
-                        <td class="icon-name">arrows-merge</td>
-                        <td class="icon-usage">Simplification, Consolidation, Fusion</td>
-                        <td><span class="icon-file">arrows-merge.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/hourglass-medium.svg" alt="hourglass-medium"></div></td>
-                        <td class="icon-name">hourglass-medium</td>
-                        <td class="icon-usage">Gain de temps, Attente, Durée</td>
-                        <td><span class="icon-file">hourglass-medium.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/database.svg" alt="database"></div></td>
-                        <td class="icon-name">database</td>
-                        <td class="icon-usage">Données, Stockage, Base de données</td>
-                        <td><span class="icon-file">database.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/lifebuoy.svg" alt="lifebuoy"></div></td>
-                        <td class="icon-name">lifebuoy</td>
-                        <td class="icon-usage">Support, Aide, Assistance</td>
-                        <td><span class="icon-file">lifebuoy.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-
-                    <!-- Icônes Créativité (Warm) -->
-                    <tr>
-                        <td><div class="icon-preview warm"><img src="assets/icones/sparkle.svg" alt="sparkle"></div></td>
-                        <td class="icon-name">sparkle</td>
-                        <td class="icon-usage">Créativité, Magie, Nouveau</td>
-                        <td><span class="icon-file">sparkle.svg</span></td>
-                        <td><span class="color-tag warm">Warm</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview warm"><img src="assets/icones/paint-brush.svg" alt="paint-brush"></div></td>
-                        <td class="icon-name">paint-brush</td>
-                        <td class="icon-usage">Agences créatives, Design, Création</td>
-                        <td><span class="icon-file">paint-brush.svg</span></td>
-                        <td><span class="color-tag warm">Warm</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview warm"><img src="assets/icones/star.svg" alt="star"></div></td>
-                        <td class="icon-name">star</td>
-                        <td class="icon-usage">Nouveau, Favoris, Premium</td>
-                        <td><span class="icon-file">star.svg</span></td>
-                        <td><span class="color-tag warm">Warm</span></td>
-                    </tr>
-
-                    <!-- Icônes Innovation (Violet) -->
-                    <tr>
-                        <td><div class="icon-preview innovation"><img src="assets/icones/brain.svg" alt="brain"></div></td>
-                        <td class="icon-name">brain</td>
-                        <td class="icon-usage">Intelligence, IA avancée, Réflexion</td>
-                        <td><span class="icon-file">brain.svg</span></td>
-                        <td><span class="color-tag innovation">Innovation</span></td>
-                    </tr>
-
-                    <!-- Icônes UI (Teal) -->
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/check-circle.svg" alt="check-circle"></div></td>
-                        <td class="icon-name">check-circle</td>
-                        <td class="icon-usage">Validé, Succès, Confirmation</td>
-                        <td><span class="icon-file">check-circle.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/info.svg" alt="info"></div></td>
-                        <td class="icon-name">info</td>
-                        <td class="icon-usage">Information, Aide, Détails</td>
-                        <td><span class="icon-file">info.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview warm"><img src="assets/icones/warning.svg" alt="warning"></div></td>
-                        <td class="icon-name">warning</td>
-                        <td class="icon-usage">Attention, Alerte, Avertissement</td>
-                        <td><span class="icon-file">warning.svg</span></td>
-                        <td><span class="color-tag warm">Warm</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/envelope-simple.svg" alt="envelope-simple"></div></td>
-                        <td class="icon-name">envelope-simple</td>
-                        <td class="icon-usage">Email, Contact, Message</td>
-                        <td><span class="icon-file">envelope-simple.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/phone.svg" alt="phone"></div></td>
-                        <td class="icon-name">phone</td>
-                        <td class="icon-usage">Téléphone, Appel, Contact</td>
-                        <td><span class="icon-file">phone.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/calendar.svg" alt="calendar"></div></td>
-                        <td class="icon-name">calendar</td>
-                        <td class="icon-usage">Calendrier, Date, Rendez-vous</td>
-                        <td><span class="icon-file">calendar.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/file-text.svg" alt="file-text"></div></td>
-                        <td class="icon-name">file-text</td>
-                        <td class="icon-usage">Document, Fichier, Contenu</td>
-                        <td><span class="icon-file">file-text.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/download.svg" alt="download"></div></td>
-                        <td class="icon-name">download</td>
-                        <td class="icon-usage">Téléchargement, Export</td>
-                        <td><span class="icon-file">download.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                    <tr>
-                        <td><div class="icon-preview teal"><img src="assets/icones/arrow-square-out.svg" alt="arrow-square-out"></div></td>
-                        <td class="icon-name">arrow-square-out</td>
-                        <td class="icon-usage">Lien externe, Ouvrir, Redirection</td>
-                        <td><span class="icon-file">arrow-square-out.svg</span></td>
-                        <td><span class="color-tag teal">Teal</span></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div style="margin-top: var(--space-2xl); padding: var(--space-lg); background: #f8fafa; border-radius: var(--radius-lg);">
-                <h4 style="font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-md);">Règles de colorisation CSS</h4>
-                <pre style="background: #1a1a2e; color: #EAF0FF; padding: var(--space-lg); border-radius: var(--radius-md); overflow-x: auto; font-family: var(--font-mono); font-size: 13px;"><code>/* Teal (défaut) */
-.icon-teal { filter: invert(42%) sepia(60%) saturate(500%) hue-rotate(130deg) brightness(95%); }
-
-/* Warm Accent */
-.icon-warm { filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(330deg) brightness(100%); }
-
-/* Innovation (Violet) */
-.icon-innovation { filter: invert(50%) sepia(80%) saturate(400%) hue-rotate(220deg) brightness(100%); }
-
-/* Blanc (sur fond sombre) */
-.icon-white { filter: brightness(0) invert(1); }</code></pre>
+            <div class="palette-group">
+                <h4 class="palette-group-title">Couleurs Essentielles</h4>
+                <div class="grid-4">
+                    <div class="color-card"><div class="color-swatch" style="background: #0B1020;"></div><div class="color-info"><div class="color-name">--bg</div><div class="color-hex">#0B1020</div><div class="color-usage">Background global</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #101A33;"></div><div class="color-info"><div class="color-name">--card</div><div class="color-hex">#101A33</div><div class="color-usage">Cards, surfaces</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #00E5A8;"></div><div class="color-info"><div class="color-name">--primary</div><div class="color-hex">#00E5A8</div><div class="color-usage">CTA</div></div></div>
+                    <div class="color-card"><div class="color-swatch" style="background: #FF5A7A;"></div><div class="color-info"><div class="color-name">--danger</div><div class="color-hex">#FF5A7A</div><div class="color-usage">Erreur</div></div></div>
+                </div>
+            </div>
+            <div class="palette-group">
+                <h4 class="palette-group-title">RGBA & Overlays</h4>
+                <div class="grid-4">
+                    <div class="rgba-group">
+                        <h4>Textes & Lignes</h4>
+                        <div class="rgba-item"><span class="name">text-muted</span><code>rgba(234,240,255,0.75)</code></div>
+                        <div class="rgba-item"><span class="name">line-soft</span><code>rgba(234,240,255,0.10)</code></div>
+                    </div>
+                    <div class="rgba-group">
+                        <h4>Focus & Hover</h4>
+                        <div class="rgba-item"><span class="name">focus</span><code>rgba(0,229,168,0.55)</code></div>
+                        <div class="rgba-item"><span class="name">glow</span><code>rgba(0,229,168,0.12)</code></div>
+                    </div>
+                    <div class="rgba-group">
+                        <h4>Danger</h4>
+                        <div class="rgba-item"><span class="name">danger-bg</span><code>rgba(255,90,122,0.10)</code></div>
+                        <div class="rgba-item"><span class="name">danger-border</span><code>rgba(255,90,122,0.35)</code></div>
+                    </div>
+                    <div class="rgba-group">
+                        <h4>Inputs</h4>
+                        <div class="rgba-item"><span class="name">input-bg</span><code>rgba(0,0,0,0.16)</code></div>
+                        <div class="rgba-item"><span class="name">input-border</span><code>rgba(0,0,0,0.10)</code></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -568,45 +949,131 @@
                 <h2>Dégradés Ocean (135°)</h2>
                 <p>Références prêtes à utiliser</p>
             </div>
-            <div class="gradient-showcase">
+            <div class="grid-3">
                 <div class="gradient-card">
                     <div class="gradient-preview" style="background: linear-gradient(135deg, #11707C 0%, #0BA08F 100%);"><span>135°</span></div>
                     <div class="gradient-info"><div class="gradient-name">Ocean Main</div><div class="gradient-usage">Logo · Hero · CTA</div><div class="gradient-code">linear-gradient(135deg, #11707C 0%, #0BA08F 100%)</div></div>
                 </div>
                 <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #0E8886 0%, #0BA08F 100%);"><span>135°</span></div>
+                    <div class="gradient-info"><div class="gradient-name">Ocean Soft</div><div class="gradient-usage">Sections · Hover</div><div class="gradient-code">linear-gradient(135deg, #0E8886 0%, #0BA08F 100%)</div></div>
+                </div>
+                <div class="gradient-card">
+                    <div class="gradient-preview" style="background: linear-gradient(135deg, #0B1020 0%, #00E5A8 100%);"><span>135°</span></div>
+                    <div class="gradient-info"><div class="gradient-name">Produit (Dark)</div><div class="gradient-usage">Accents · Glow</div><div class="gradient-code">linear-gradient(135deg, #0B1020 0%, #00E5A8 100%)</div></div>
+                </div>
+                <div class="gradient-card">
                     <div class="gradient-preview" style="background: linear-gradient(135deg, #FF8F5C 0%, #FFB694 100%);"><span>135°</span></div>
-                    <div class="gradient-info"><div class="gradient-name">Warm Accent <span class="v2-badge">V2</span></div><div class="gradient-usage">Badges · Témoignages</div><div class="gradient-code">linear-gradient(135deg, #FF8F5C 0%, #FFB694 100%)</div></div>
+                    <div class="gradient-info"><div class="gradient-name">Warm Accent</div><div class="gradient-usage">Badges · Témoignages</div><div class="gradient-code">linear-gradient(135deg, #FF8F5C 0%, #FFB694 100%)</div></div>
                 </div>
                 <div class="gradient-card">
                     <div class="gradient-preview" style="background: linear-gradient(135deg, #8B7FE8 0%, #B5ADEF 100%);"><span>135°</span></div>
-                    <div class="gradient-info"><div class="gradient-name">Innovation <span class="v2-badge">V2</span></div><div class="gradient-usage">IA · Features innovantes</div><div class="gradient-code">linear-gradient(135deg, #8B7FE8 0%, #B5ADEF 100%)</div></div>
+                    <div class="gradient-info"><div class="gradient-name">Innovation</div><div class="gradient-usage">IA · Features</div><div class="gradient-code">linear-gradient(135deg, #8B7FE8 0%, #B5ADEF 100%)</div></div>
                 </div>
                 <div class="gradient-card">
                     <div class="gradient-preview" style="background: linear-gradient(135deg, #11707C 0%, #0BA08F 50%, #00E5A8 100%);"><span>135°</span></div>
-                    <div class="gradient-info"><div class="gradient-name">Liberation <span class="v2-badge">V2</span></div><div class="gradient-usage">Wave signature</div><div class="gradient-code">linear-gradient(135deg, #11707C 0%, #0BA08F 50%, #00E5A8 100%)</div></div>
+                    <div class="gradient-info"><div class="gradient-name">Liberation</div><div class="gradient-usage">Wave signature</div><div class="gradient-code">linear-gradient(135deg, #11707C 0%, #0BA08F 50%, #00E5A8 100%)</div></div>
+                </div>
+            </div>
+            <div class="info-box">
+                <p><strong>Règles :</strong> ✗ Jamais plus de 2 couleurs visibles · ✗ Pas de dégradé décoratif inutile · ✓ Logo, hero, visuels forts uniquement</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉLÉMENT SIGNATURE : WAVE -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Élément Signature : Wave</h2>
+                <p>Forme fluide "l'IA libère la créativité"</p>
+            </div>
+            
+            <div class="wave-showcase">
+                <div class="wave-showcase-demo">
+                    <p class="wave-showcase-text">Libérez votre potentiel créatif</p>
+                    <svg class="wave-showcase-svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="waveGradShowcase" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#11707C"/>
+                                <stop offset="50%" style="stop-color:#0BA08F"/>
+                                <stop offset="100%" style="stop-color:#00E5A8"/>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#waveGradShowcase)" fill-opacity="0.15" d="M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L0,120Z"></path>
+                        <path fill="url(#waveGradShowcase)" fill-opacity="0.4" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,90.7C840,96,960,96,1080,90.7C1200,85,1320,75,1380,69.3L1440,64L1440,120L0,120Z"></path>
+                    </svg>
+                </div>
+                <div class="wave-showcase-info">
+                    <h4>Usages de la Wave</h4>
+                    <div class="wave-usages-grid">
+                        <div class="wave-usage-card">
+                            <strong>Séparateur</strong>
+                            <span>Entre sections</span>
+                        </div>
+                        <div class="wave-usage-card">
+                            <strong>Background</strong>
+                            <span>Opacité 5-10%</span>
+                        </div>
+                        <div class="wave-usage-card">
+                            <strong>Avant/Après</strong>
+                            <span>Transition visuelle</span>
+                        </div>
+                        <div class="wave-usage-card">
+                            <strong>Hero</strong>
+                            <span>Bas de section</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WAVE SIGNATURE -->
+    <!-- SYSTÈME D'ICÔNES -->
     <section>
         <div class="container">
             <div class="section-header">
-                <h2>Élément Signature : Wave</h2>
-                <p><span class="v2-badge">NOUVEAU V2</span> Forme fluide "l'IA libère la créativité"</p>
+                <h2>Système d'Icônes</h2>
+                <p>27 icônes Phosphor Duotone — Fichiers SVG inclus</p>
             </div>
-            <div class="wave-showcase">
-                <div class="wave-demo"><span class="wave-demo-text">Libérez votre potentiel créatif</span></div>
-                <div class="wave-info">
-                    <h4>Usages de la Wave</h4>
-                    <div class="wave-usages">
-                        <div class="wave-usage-item"><div><strong>Séparateur</strong>Entre sections</div></div>
-                        <div class="wave-usage-item"><div><strong>Background</strong>Opacité 5-10%</div></div>
-                        <div class="wave-usage-item"><div><strong>Avant/Après</strong>Transition visuelle</div></div>
-                        <div class="wave-usage-item"><div><strong>Hero</strong>Bas de section</div></div>
-                    </div>
-                </div>
+            <table class="icon-table">
+                <thead>
+                    <tr>
+                        <th>Icône</th>
+                        <th>Nom</th>
+                        <th>Usage</th>
+                        <th>Fichier</th>
+                        <th>Couleur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/robot.svg" alt="robot"></div></td><td class="icon-name">robot</td><td>IA, Automation</td><td><span class="icon-file">robot.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/flow-arrow.svg" alt="flow-arrow"></div></td><td class="icon-name">flow-arrow</td><td>Workflows, Processus</td><td><span class="icon-file">flow-arrow.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/clock-countdown.svg" alt="clock"></div></td><td class="icon-name">clock-countdown</td><td>Temps gagné, Rapidité</td><td><span class="icon-file">clock-countdown.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/chart-line-up.svg" alt="chart"></div></td><td class="icon-name">chart-line-up</td><td>ROI, Performance</td><td><span class="icon-file">chart-line-up.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/handshake.svg" alt="handshake"></div></td><td class="icon-name">handshake</td><td>Partenariat, Confiance</td><td><span class="icon-file">handshake.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/shield-check.svg" alt="shield"></div></td><td class="icon-name">shield-check</td><td>Sécurité, Protection</td><td><span class="icon-file">shield-check.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/target.svg" alt="target"></div></td><td class="icon-name">target</td><td>Objectifs, Focus</td><td><span class="icon-file">target.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/lightning.svg" alt="lightning"></div></td><td class="icon-name">lightning</td><td>Rapidité, Énergie</td><td><span class="icon-file">lightning.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/code-simple.svg" alt="code"></div></td><td class="icon-name">code-simple</td><td>No-Code, Tech</td><td><span class="icon-file">code-simple.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/plugs-connected.svg" alt="plugs"></div></td><td class="icon-name">plugs-connected</td><td>Intégration, API</td><td><span class="icon-file">plugs-connected.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/database.svg" alt="database"></div></td><td class="icon-name">database</td><td>Données, Stockage</td><td><span class="icon-file">database.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/lifebuoy.svg" alt="lifebuoy"></div></td><td class="icon-name">lifebuoy</td><td>Support, Aide</td><td><span class="icon-file">lifebuoy.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell warm"><img src="assets/icones/sparkle.svg" alt="sparkle"></div></td><td class="icon-name">sparkle</td><td>Créativité, Magie</td><td><span class="icon-file">sparkle.svg</span></td><td><span class="color-tag warm">Warm</span></td></tr>
+                    <tr><td><div class="icon-preview-cell warm"><img src="assets/icones/paint-brush.svg" alt="brush"></div></td><td class="icon-name">paint-brush</td><td>Design, Création</td><td><span class="icon-file">paint-brush.svg</span></td><td><span class="color-tag warm">Warm</span></td></tr>
+                    <tr><td><div class="icon-preview-cell warm"><img src="assets/icones/star.svg" alt="star"></div></td><td class="icon-name">star</td><td>Nouveau, Premium</td><td><span class="icon-file">star.svg</span></td><td><span class="color-tag warm">Warm</span></td></tr>
+                    <tr><td><div class="icon-preview-cell innovation"><img src="assets/icones/brain.svg" alt="brain"></div></td><td class="icon-name">brain</td><td>Intelligence, IA avancée</td><td><span class="icon-file">brain.svg</span></td><td><span class="color-tag innovation">Innovation</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/check-circle.svg" alt="check"></div></td><td class="icon-name">check-circle</td><td>Validé, Succès</td><td><span class="icon-file">check-circle.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/info.svg" alt="info"></div></td><td class="icon-name">info</td><td>Information, Aide</td><td><span class="icon-file">info.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell warm"><img src="assets/icones/warning.svg" alt="warning"></div></td><td class="icon-name">warning</td><td>Alerte, Attention</td><td><span class="icon-file">warning.svg</span></td><td><span class="color-tag warm">Warm</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/envelope-simple.svg" alt="envelope"></div></td><td class="icon-name">envelope-simple</td><td>Email, Contact</td><td><span class="icon-file">envelope-simple.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/calendar.svg" alt="calendar"></div></td><td class="icon-name">calendar</td><td>Calendrier, RDV</td><td><span class="icon-file">calendar.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                    <tr><td><div class="icon-preview-cell teal"><img src="assets/icones/download.svg" alt="download"></div></td><td class="icon-name">download</td><td>Téléchargement</td><td><span class="icon-file">download.svg</span></td><td><span class="color-tag teal">Teal</span></td></tr>
+                </tbody>
+            </table>
+            <div style="margin-top: var(--space-xl); background: #1a1a2e; padding: var(--space-lg); border-radius: var(--radius-lg);">
+                <p style="font-family: var(--font-mono); font-size: 12px; color: #8a8f9a; margin-bottom: var(--space-sm);">/* Colorisation CSS */</p>
+                <code style="font-family: var(--font-mono); font-size: 12px; color: var(--dark-primary);">.icon-teal { filter: invert(42%) sepia(60%) saturate(500%) hue-rotate(130deg); }<br>.icon-warm { filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(330deg); }<br>.icon-white { filter: brightness(0) invert(1); }</code>
             </div>
         </div>
     </section>
@@ -618,19 +1085,20 @@
                 <h2>Système Typographique</h2>
                 <p>Polices et hiérarchie</p>
             </div>
-            <div class="typo-showcase">
+            <div class="grid-3">
                 <div class="typo-card montserrat"><div class="typo-preview">Aa</div><div class="typo-name">Montserrat</div><div class="typo-role">Titres · Autorité</div></div>
                 <div class="typo-card inter"><div class="typo-preview">Aa</div><div class="typo-name">Inter</div><div class="typo-role">Interface · Lisibilité</div></div>
                 <div class="typo-card mono"><div class="typo-preview">Aa</div><div class="typo-name">IBM Plex Mono</div><div class="typo-role">Code · Données</div></div>
             </div>
-            <table class="hierarchy-table">
+            <table class="hierarchy-table" style="margin-top: var(--space-xl);">
                 <thead><tr><th>Niveau</th><th>Specs</th><th>Aperçu</th></tr></thead>
                 <tbody>
-                    <tr><td><span class="level">H1</span></td><td class="specs">32px · 700</td><td><span class="preview-h1">Alpha</span></td></tr>
-                    <tr><td><span class="level">H2</span></td><td class="specs">24px · 600</td><td><span class="preview-h2">Solutions IA</span></td></tr>
-                    <tr><td><span class="level">H3</span></td><td class="specs">20px · 600</td><td><span class="preview-h3">Interface</span></td></tr>
-                    <tr><td><span class="level">Body</span></td><td class="specs">16px · 400</td><td><span class="preview-body">Texte principal</span></td></tr>
-                    <tr><td><span class="level">Code</span></td><td class="specs">14px · 400</td><td><span class="preview-code">const alpha = {};</span></td></tr>
+                    <tr><td><span class="level-tag">H1</span></td><td class="specs">32px · 700</td><td style="font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--brand-teal-deep);">Alpha</td></tr>
+                    <tr><td><span class="level-tag">H2</span></td><td class="specs">24px · 600</td><td style="font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--brand-teal-deep);">Solutions IA</td></tr>
+                    <tr><td><span class="level-tag">H3</span></td><td class="specs">20px · 600</td><td style="font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--brand-teal-deep);">Interface</td></tr>
+                    <tr><td><span class="level-tag">Body</span></td><td class="specs">16px · 400</td><td style="font-size: 16px;">Texte principal</td></tr>
+                    <tr><td><span class="level-tag">UI</span></td><td class="specs">14px · 500</td><td style="font-size: 14px; font-weight: 500; color: #5a6170;">Bouton</td></tr>
+                    <tr><td><span class="level-tag">Code</span></td><td class="specs">14px · 400</td><td><code style="font-family: var(--font-mono); font-size: 14px; color: var(--brand-teal-signature); background: #f0f7f7; padding: 4px 8px; border-radius: 4px;">const alpha = {};</code></td></tr>
                 </tbody>
             </table>
         </div>
@@ -643,18 +1111,18 @@
                 <h2>Système UI — Brand</h2>
                 <p>Boutons et badges</p>
             </div>
-            <h4 style="font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-lg);">Boutons</h4>
-            <div class="buttons-showcase">
+            <h4 style="font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-lg);">Boutons</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-2xl);">
                 <button class="btn btn-primary">Primaire</button>
                 <button class="btn btn-secondary">Secondaire</button>
                 <button class="btn btn-ghost">Ghost</button>
-                <button class="btn btn-warm">Accent Chaud <span class="v2-badge">V2</span></button>
+                <button class="btn btn-warm">Accent Chaud</button>
             </div>
-            <h4 style="font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--brand-teal-deep); margin: var(--space-2xl) 0 var(--space-lg);">Badges</h4>
-            <div class="badges-showcase">
-                <span class="badge badge-primary">Actif</span>
+            <h4 style="font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--brand-teal-deep); margin-bottom: var(--space-lg);">Badges</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-md);">
                 <span class="badge badge-warm">Nouveau</span>
-                <span class="badge badge-innovation">IA</span>
+                <span class="badge badge-primary">Actif</span>
+                <span class="badge badge-innovation">Premium</span>
                 <span class="badge badge-success">Validé</span>
             </div>
         </div>
@@ -667,19 +1135,62 @@
                 <h2>Système UI — Produit (Dark)</h2>
                 <p>Composants pour formulaires et apps</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-xl);">
+            <div class="grid-2">
                 <div class="dark-card">
                     <h4>Formulaire type</h4>
-                    <div style="margin-bottom: var(--space-md);"><label style="display: block; font-size: 13px; color: var(--text-muted); margin-bottom: var(--space-xs);">Nom *</label><input type="text" class="dark-input" placeholder="Votre agence"></div>
-                    <div style="display: flex; gap: var(--space-md); margin-top: var(--space-lg);"><button class="dark-btn dark-btn-secondary">Précédent</button><button class="dark-btn">Envoyer</button></div>
+                    <div style="margin-bottom: var(--space-md);">
+                        <label style="display: block; font-size: 13px; color: var(--text-muted); margin-bottom: 6px;">Nom de l'agence *</label>
+                        <input type="text" class="dark-input" placeholder="Votre agence">
+                    </div>
+                    <div style="display: flex; gap: var(--space-md); margin-top: var(--space-lg);">
+                        <button class="dark-btn dark-btn-secondary">Précédent</button>
+                        <button class="dark-btn">Envoyer</button>
+                    </div>
                 </div>
                 <div class="dark-card">
                     <h4>Tokens Dark UI</h4>
                     <div style="display: grid; gap: var(--space-sm);">
-                        <div style="display: flex; justify-content: space-between; padding: var(--space-sm); background: rgba(0,0,0,0.2); border-radius: var(--radius-sm);"><span style="color: var(--text-muted);">--bg</span><code style="font-family: var(--font-mono); color: var(--dark-primary);">#0B1020</code></div>
-                        <div style="display: flex; justify-content: space-between; padding: var(--space-sm); background: rgba(0,0,0,0.2); border-radius: var(--radius-sm);"><span style="color: var(--text-muted);">--primary</span><code style="font-family: var(--font-mono); color: var(--dark-primary);">#00E5A8</code></div>
+                        <div style="display: flex; justify-content: space-between; padding: 8px; background: rgba(0,0,0,0.2); border-radius: 6px;"><span style="color: var(--text-muted);">--bg</span><code style="font-family: var(--font-mono); color: var(--dark-primary);">#0B1020</code></div>
+                        <div style="display: flex; justify-content: space-between; padding: 8px; background: rgba(0,0,0,0.2); border-radius: 6px;"><span style="color: var(--text-muted);">--primary</span><code style="font-family: var(--font-mono); color: var(--dark-primary);">#00E5A8</code></div>
+                        <div style="display: flex; justify-content: space-between; padding: 8px; background: rgba(0,0,0,0.2); border-radius: 6px;"><span style="color: var(--text-muted);">--danger</span><code style="font-family: var(--font-mono); color: var(--dark-danger);">#FF5A7A</code></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCESSIBILITÉ -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Accessibilité</h2>
+                <p>Contrastes validés WCAG</p>
+            </div>
+            <div class="grid-3">
+                <div class="contrast-card">
+                    <div class="contrast-demo">
+                        <div class="contrast-preview" style="background: #0B1020; color: #EAF0FF;">Aa</div>
+                        <div><div class="contrast-ratio">16.59:1</div><div class="contrast-status">✓ OK</div></div>
+                    </div>
+                    <p style="font-size: 14px; color: #5a6170;"><strong>Texte principal Dark</strong><br><span style="font-family: var(--font-mono); font-size: 11px;">#EAF0FF sur #0B1020</span></p>
+                </div>
+                <div class="contrast-card">
+                    <div class="contrast-demo">
+                        <div class="contrast-preview" style="background: #00E5A8; color: #0B1020;">Aa</div>
+                        <div><div class="contrast-ratio">11.52:1</div><div class="contrast-status">✓ OK</div></div>
+                    </div>
+                    <p style="font-size: 14px; color: #5a6170;"><strong>CTA Dark</strong><br><span style="font-family: var(--font-mono); font-size: 11px;">#0B1020 sur #00E5A8</span></p>
+                </div>
+                <div class="contrast-card">
+                    <div class="contrast-demo">
+                        <div class="contrast-preview" style="background: #0B1020; color: #FF5A7A;">Aa</div>
+                        <div><div class="contrast-ratio">6.31:1</div><div class="contrast-status">✓ OK</div></div>
+                    </div>
+                    <p style="font-size: 14px; color: #5a6170;"><strong>Danger Dark</strong><br><span style="font-family: var(--font-mono); font-size: 11px;">#FF5A7A sur #0B1020</span></p>
+                </div>
+            </div>
+            <div class="info-box">
+                <p><strong>Checklist :</strong> Focus visible 2px · Taille min 14px UI / 16px body · Cibles tactiles ≥ 44×44px · États hover/focus/disabled</p>
             </div>
         </div>
     </section>
@@ -691,7 +1202,7 @@
                 <h2>Règles d'Utilisation</h2>
                 <p>À faire et à éviter</p>
             </div>
-            <div class="rules-grid">
+            <div class="grid-2">
                 <div class="rules-do">
                     <h4 class="rules-title">✓ À FAIRE</h4>
                     <ul class="rules-list">
@@ -699,7 +1210,7 @@
                         <li>• CTA toujours teal (#0BA08F ou #00E5A8)</li>
                         <li>• Fond clair = marque / commercial</li>
                         <li>• Fond dark = produit / outil</li>
-                        <li>• Accent warm (#FF8F5C) max 10-15%</li>
+                        <li>• Accent warm max 10-15%</li>
                         <li>• Icônes SVG colorisées via CSS</li>
                     </ul>
                 </div>
@@ -708,13 +1219,21 @@
                     <ul class="rules-list">
                         <li>• Multiplier les teals sans logique</li>
                         <li>• Mélanger clair et dark sur un écran</li>
-                        <li>• Utiliser des emojis officiels</li>
+                        <li>• Utiliser des emojis au lieu des icônes</li>
                         <li>• Accent warm > 15% de la palette</li>
                         <li>• Texte sur dégradé sans plaque</li>
                         <li>• Modifier les couleurs des logos</li>
                     </ul>
                 </div>
             </div>
+            <table class="synthesis-table" style="margin-top: var(--space-2xl);">
+                <thead><tr><th>Contexte</th><th>Palette</th><th>Usage</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Logo / site / PDF</strong></td><td>Blanc + Teal (#11707C → #0BA08F)</td><td>Crédibilité / décision</td></tr>
+                    <tr><td><strong>Formulaire / app</strong></td><td>Dark (#0B1020) + Teal (#00E5A8)</td><td>Conversion / expérience</td></tr>
+                </tbody>
+            </table>
+            <p style="text-align: center; margin-top: var(--space-xl); color: var(--brand-teal-deep); font-weight: 500;">Même ADN, deux ambiances maîtrisées.</p>
         </div>
     </section>
 
@@ -723,8 +1242,8 @@
         <div class="container">
             <img src="assets/logo-mono-white.svg" alt="Alpha No-Code" class="footer-logo">
             <h3>Alpha No-Code</h3>
-            <p style="margin-bottom: var(--space-sm);">Charte graphique v2.0 · 2025</p>
-            <p>Cette charte garantit une cohérence visuelle parfaite.</p>
+            <p>Charte graphique officielle · 2025</p>
+            <p style="margin-top: var(--space-sm);">Cette charte garantit une cohérence visuelle parfaite sur tous vos supports.</p>
             <p style="margin-top: var(--space-md);"><a href="https://alpha-nc.com">alpha-nc.com</a></p>
         </div>
     </footer>
